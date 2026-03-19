@@ -1,0 +1,6 @@
+{
+  "Name": "TxAssessmentTesting",
+  "ProjectType": "Tests",
+  "Description": "Tx Assessment UiPath Testing",
+  "MainFile": "Main.xaml"
+}
