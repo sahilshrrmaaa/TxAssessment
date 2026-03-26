@@ -46,6 +46,10 @@
       <x:String>System.Xml</x:String>
       <x:String>System.Xml.Linq</x:String>
       <x:String>System.Windows.Markup</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.Collections.Specialized</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -125,9 +129,11 @@
       <AssemblyReference>System.Net.Mail</AssemblyReference>
       <AssemblyReference>System.Private.Xml.Linq</AssemblyReference>
       <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>System.Collections.Specialized</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="645,3786" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap:VirtualizedContainerService.HintSize="947,3734" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="reportIdLocal" />
       <Variable x:TypeArguments="x:String" Name="reportName" />
@@ -146,15 +152,15 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="515,3763" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="515,3711" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="513,2739" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="513,2691" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="479,308" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+          <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="479,304" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
             <ui:MultipleAssign.AssignOperations>
               <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
                 <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -222,27 +228,27 @@
               </scg:List>
             </ui:MultipleAssign.AssignOperations>
           </ui:MultipleAssign>
-          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="479,179" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info">
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="479,175" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info">
             <ui:LogMessage.Message>
               <InArgument x:TypeArguments="x:Object">
                 <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_27">"test file variables data assigned"</CSharpValue>
               </InArgument>
             </ui:LogMessage.Message>
           </ui:LogMessage>
-          <If sap:VirtualizedContainerService.HintSize="479,774" sap2010:WorkflowViewState.IdRef="If_1">
+          <If sap:VirtualizedContainerService.HintSize="479,758" sap2010:WorkflowViewState.IdRef="If_1">
             <If.Condition>
               <InArgument x:TypeArguments="x:Boolean">
                 <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">reportIdLocal == 0</CSharpValue>
               </InArgument>
             </If.Condition>
             <If.Then>
-              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,401" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,393" sap2010:WorkflowViewState.IdRef="Sequence_3">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ra:CreateReport ContinueOnError="{x:Null}" DisplayName="Create Report" sap:VirtualizedContainerService.HintSize="416,171" sap2010:WorkflowViewState.IdRef="CreateReport_1">
+                <ra:CreateReport ContinueOnError="{x:Null}" DisplayName="Create Report" sap:VirtualizedContainerService.HintSize="416,167" sap2010:WorkflowViewState.IdRef="CreateReport_1">
                   <ra:CreateReport.ReportLocation>
                     <InArgument x:TypeArguments="x:String">
                       <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">reportLocation</CSharpValue>
@@ -259,7 +265,7 @@
                     </OutArgument>
                   </ra:CreateReport.isCreated>
                 </ra:CreateReport>
-                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,170" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info">
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info">
                   <ui:LogMessage.Message>
                     <InArgument x:TypeArguments="x:Object">
                       <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_22">"created report within testCase: "+reportName</CSharpValue>
@@ -269,13 +275,13 @@
               </Sequence>
             </If.Then>
             <If.Else>
-              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,234" sap2010:WorkflowViewState.IdRef="Sequence_4">
+              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,226" sap2010:WorkflowViewState.IdRef="Sequence_4">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,170" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info">
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info">
                   <ui:LogMessage.Message>
                     <InArgument x:TypeArguments="x:Object">
                       <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">"running from main file"</CSharpValue>
@@ -285,7 +291,7 @@
               </Sequence>
             </If.Else>
           </If>
-          <ra:StartSuite ContinueOnError="{x:Null}" DisplayName="Start Suite" sap:VirtualizedContainerService.HintSize="479,122" sap2010:WorkflowViewState.IdRef="StartSuite_1">
+          <ra:StartSuite ContinueOnError="{x:Null}" DisplayName="Start Suite" sap:VirtualizedContainerService.HintSize="479,118" sap2010:WorkflowViewState.IdRef="StartSuite_1">
             <ra:StartSuite.ReportId>
               <InArgument x:TypeArguments="x:Int32">
                 <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">reportIdLocal</CSharpValue>
@@ -302,14 +308,14 @@
               </OutArgument>
             </ra:StartSuite.suiteId>
           </ra:StartSuite>
-          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="479,179" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info">
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="479,175" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info">
             <ui:LogMessage.Message>
               <InArgument x:TypeArguments="x:Object">
                 <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_23">"start suite activity ran"</CSharpValue>
               </InArgument>
             </ui:LogMessage.Message>
           </ui:LogMessage>
-          <ra:StartTest ContinueOnError="{x:Null}" TestDescription="{x:Null}" DisplayName="Start Test" sap:VirtualizedContainerService.HintSize="479,122" sap2010:WorkflowViewState.IdRef="StartTest_1" Priority="Medium">
+          <ra:StartTest ContinueOnError="{x:Null}" TestDescription="{x:Null}" DisplayName="Start Test" sap:VirtualizedContainerService.HintSize="479,118" sap2010:WorkflowViewState.IdRef="StartTest_1" Priority="Medium">
             <ra:StartTest.ReportId>
               <InArgument x:TypeArguments="x:Int32">
                 <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_9">reportIdLocal</CSharpValue>
@@ -336,14 +342,14 @@
               </OutArgument>
             </ra:StartTest.testId>
           </ra:StartTest>
-          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="479,179" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info">
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="479,175" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info">
             <ui:LogMessage.Message>
               <InArgument x:TypeArguments="x:Object">
                 <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_24">"test started"</CSharpValue>
               </InArgument>
             </ui:LogMessage.Message>
           </ui:LogMessage>
-          <ui:ReadRange Range="{x:Null}" AddHeaders="True" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="479,124" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1">
+          <ui:ReadRange Range="{x:Null}" AddHeaders="True" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="479,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1">
             <ui:ReadRange.DataTable>
               <OutArgument x:TypeArguments="sd:DataTable">
                 <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_10">excelData</CSharpReference>
