@@ -179,7 +179,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap:VirtualizedContainerService.HintSize="797,5121" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap:VirtualizedContainerService.HintSize="743,5121" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="reportName" />
       <Variable x:TypeArguments="x:String" Name="reportLocation" />
@@ -269,7 +269,7 @@
                   </ui:AssignOperation.To>
                   <ui:AssignOperation.Value>
                     <InArgument x:TypeArguments="x:String">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_36">Path.Combine(Environment.CurrentDirectory, "Reports")</CSharpValue>
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_45">System.IO.Path.Combine(Environment.CurrentDirectory, "Reports")</CSharpValue>
                     </InArgument>
                   </ui:AssignOperation.Value>
                 </ui:AssignOperation>
@@ -529,7 +529,7 @@
             </uix:NApplicationCard.OCREngine>
             <uix:NApplicationCard.OpenMode>
               <InArgument x:TypeArguments="uix:NAppOpenMode">
-                <CSharpValue x:TypeArguments="uix:NAppOpenMode" sap2010:WorkflowViewState.IdRef="CSharpValue`1_35">UiPath.UIAutomationNext.Enums.NAppOpenMode.Always</CSharpValue>
+                <CSharpValue x:TypeArguments="uix:NAppOpenMode" sap2010:WorkflowViewState.IdRef="CSharpValue`1_46">UiPath.UIAutomationNext.Enums.NAppOpenMode.IfNotOpen</CSharpValue>
               </InArgument>
             </uix:NApplicationCard.OpenMode>
             <uix:NApplicationCard.TargetApp>

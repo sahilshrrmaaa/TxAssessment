@@ -9,7 +9,7 @@
       "AddedNamespaces": null
     },
     {
-      "Path": ".templates/TestCaseTemplate.xaml",
+      "Path": "TestCases/TC_01_Login.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": null,
@@ -17,7 +17,23 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "TestCases/TC_01_Login.xaml",
+      "Path": "TestCases/TC_02_TopicSelectionWithLogIn.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": null,
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": ".templates/TestCaseTemplateUpdated.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": null,

@@ -58,15 +58,22 @@
         "fileName": "Template.xaml"
       },
       {
-        "templateType": "TestCase",
-        "fileName": ".templates\\TestCaseTemplate.xaml"
-      },
-      {
         "editingStatus": "InProgress",
         "testCaseId": "60ba7d8b-f2af-4852-9891-78b3bd4ef26d",
         "testCaseType": "TestCase",
         "executionTemplateInvokeIsolated": false,
         "fileName": "TestCases\\TC_01_Login.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "fdaa6412-a95a-41cc-80d3-18247255c4d6",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "TestCases\\TC_02_TopicSelectionWithLogIn.xaml"
+      },
+      {
+        "templateType": "TestCase",
+        "fileName": ".templates\\TestCaseTemplateUpdated.xaml"
       }
     ],
     "saveToCloud": false
